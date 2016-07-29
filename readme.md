@@ -1,1 +1,2 @@
-readme.md
+== README 
+  This is a project that I have wanted to build since around November of 2015. It is a town, I guess you could say similar to the game The Sims. It is completely made by classes and objects. All of the classes and objects will interact with each other. Its main focus is to help me better understand OOP better. 
