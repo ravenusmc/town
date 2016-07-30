@@ -25,3 +25,11 @@ class Human():
 
   def bathroom(self):
     print(self.name + " went to the bathoom!")
+
+  def smile(self, waiter):
+    print("You smiled!")
+    waiter.love += 2
+    print(waiter.love)
+
+  def touch(self, waiter):
+    print()

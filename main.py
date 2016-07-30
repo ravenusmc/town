@@ -17,6 +17,13 @@ def resturant(person):
   if sit == "counter":
     resturant.counter(person)
     waiter.greet(person) 
+    flirt = input("Do you want to try and flirt with the waitress?(y/n) ")
+    if flirt == "y":
+      print("1. smile")
+      print("2. touch hand")
+      option = int(input("What would you like to do?"))
+      if option == 1:
+        person.smile(waiter) 
     resturant.menu(person)
   elif sit == "table":
     resturant.table(person)
