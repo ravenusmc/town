@@ -3,19 +3,21 @@ import random
 #Classes being imported
 from human import Human
 from car import Car
-from resturant import Resturant
+from resturant import *
 
 
 #### Resturant Functions ############
 
 def resturant(person):
   resturant = Resturant()
+  waiter = Waiter()
   print(person.name + " goes into the resturant!")
   print("you see a counter or table.")
   sit = input("Where do you want to sit down?(counter or table) ")
-  if sit == counter:
+  if sit == "counter":
     resturant.counter(person)
-  elif sit == table:
+    waiter.greet(person) 
+  elif sit == "table":
     resturant.table(person)
     
 
