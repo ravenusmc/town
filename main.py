@@ -17,8 +17,10 @@ def resturant(person):
   if sit == "counter":
     resturant.counter(person)
     waiter.greet(person) 
+    resturant.menu(person)
   elif sit == "table":
     resturant.table(person)
+    waiter.greet(person) 
     
 
 
@@ -26,6 +28,10 @@ def resturant(person):
 
 def start(person):
   print("\033c")
+  print("Imagine, if you will, a normal town in middle America")
+  print("This town, from the outside appears perfectly normal")
+  print("Yet, there is something not quite right about it...")
+  print('\n')
   print("You are standing on the edge of the street.")
   print("You have no idea how you got there...")
   print('\n')
@@ -58,9 +64,5 @@ def main():
     config()
   else:
     print("Thank you for coming by!")
-
-# person.walk()
-# car = Car("Prius")
-# car.start(person)
 
 main()
