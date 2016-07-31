@@ -48,3 +48,17 @@ class Human():
         print("You decide to continue to look at the menu.")
       else:
         print("The waitress holds on to your hand. You can feel you two have a connection!")
+
+  def talk(self, waiter):
+    if self.gender == "male" and waiter.id == "waiter":
+      print("'What town is this?' You ask.")
+      waiter.love += 1
+      print("'Why this is MorrisVille!")
+      print("The waitress smiles as you look her over.")
+    elif self.gender == "female" and waiter.id == "waiter":
+      print("'What town is this?' You ask.")
+      waiter.love += 1
+      print("'Why this is MorrisVille!")
+      print("The waiter smiles as you look him over.")
+
+

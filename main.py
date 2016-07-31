@@ -20,14 +20,20 @@ def resturant(person):
     waiter.greet(person) 
     flirt = input("Do you want to try and flirt with the waitress?(y/n) ")
     if flirt == "y":
-      print("1. smile")
-      print("2. touch hand")
+      print("1. Smile")
+      print("2. Touch hand")
+      print("3. Talk")
       option = int(input("What would you like to do?"))
       if option == 1:
         person.smile(waiter)
       elif option == 2:
         person.touch(waiter) 
+      elif option == 3:
+        person.talk(waiter)
     resturant.menu(person)
+    ####
+    print('You wait about five minutes and your items, which you ordered come out!')
+    print("The food is okay but you fee anxious about moving on!")
   elif sit == "table":
     resturant.table(person)
     waiter.greet(person) 
@@ -61,6 +67,8 @@ def start(person):
   print("Next to the dance club you see an office that is hiring people")
   print("Finally, you notice you have fifty dollars on yourself")
   choice = input("Where do you want to do?(resturant, club, office) ")
+  while not validStartChoice(choice):
+    choice = input("Where do you want to do?(resturant, club, office) ")
   if choice == "resturant":
     resturant(person)
 
