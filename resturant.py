@@ -18,7 +18,6 @@ class Resturant():
     print("4. Burger-$3.00")
     select = int(input("What do you want? "))
 
-
 class Waiter(Resturant):
 
   def __init__(self):
@@ -29,6 +28,6 @@ class Waiter(Resturant):
       print("Well Hello there Mr!")
       print("What are we having today?")
     elif human.gender == "female":
-      print("Well Hello there Madam!")
+      print("Well, Hello there Madam!")
       print("What do you want today?")
 

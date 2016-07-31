@@ -42,3 +42,9 @@ class Human():
         print("The waitress holds on to your hand. You can feel you two have a connection!")
     elif self.gender == "female":
       print("You reach out and touch the waiters hand.")
+      if waiter.love <= 8:
+        print("The waitress slaps your hand")
+        print("'What do you think your doing Mr.' She says. 'I barely know you!'")
+        print("You decide to continue to look at the menu.")
+      else:
+        print("The waitress holds on to your hand. You can feel you two have a connection!")

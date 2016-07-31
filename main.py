@@ -4,6 +4,7 @@ import random
 from human import Human
 from car import Car
 from resturant import *
+from validation import *
 
 
 #### Resturant Functions ############
@@ -69,6 +70,8 @@ def config():
   print("To start, I need some data ")
   name = input("What is your name? ")
   age = int(input("what is your age: "))
+  while not validConfig(age):
+    age = int(input("what is your age: "))
   gender = input("What is your gender? ")
   person = Human(name, age, gender)
   print("Here we go!!!")
@@ -79,6 +82,8 @@ def main():
   print("Welcome to the Object town!")
   print("---------------------------")
   choice = input("Do you want to use it?(y/n) ")
+  while not validMain(choice):
+    choice = input("Do you want to use it?(y/n) ")
   if choice == 'y':
     config()
   else:
