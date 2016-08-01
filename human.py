@@ -9,6 +9,7 @@ class Human():
     self.boredom = 0
     self.bathroom = 0
     self.money = 50
+    self.dating = False
 
   def walk(self):
     print(self.name + " is walking!")
@@ -49,16 +50,74 @@ class Human():
       else:
         print("The waitress holds on to your hand. You can feel you two have a connection!")
 
-  def talk(self, waiter):
+  def talkResturant(self, waiter):
     if self.gender == "male" and waiter.id == "waiter":
-      print("'What town is this?' You ask.")
-      waiter.love += 1
-      print("'Why this is MorrisVille!")
-      print("The waitress smiles as you look her over.")
+      info = input("What do you want to learn about 'town', 'work', 'bed', 'love'or 'done' ")
+      while True:
+        if info == "town":
+          print("'What town is this?' You ask.")
+          waiter.love += 1
+          print("'Why this is MorrisVille!' The Waitress responds")
+          print("The waitress smiles as you look her over.")
+        elif info == "work":
+          print("Is there a place that I can get some work?")
+          waiter.love += 1
+          print("Of course there dear! Just hold over to the office building!")
+          print("They are always looking for help and pay well")
+        elif info == "bed":
+          print("Is there a place that I can get a bed to stay here?")
+          print("Oh yeah, head to the apartments. However, they are expensive")
+          print("Not sure about the amount of money you have but you may need a job...")
+          waiter.love += 1
+        elif info == "love":
+          print("Any ideas on where I can find a date here in this town?")
+          if waiter.love >= 8:
+            print("why you can date me! I have been looking for a partner!")
+            date = print("Do you want to date me?(y/n) ")
+            if date == 'y':
+              self.dating = True
+            elif date == 'n':
+              print("The waitress hits you!")
+              print("Now you hurt my feelings!")
+              waiter.love -= 3
+          elif waiter.love < 8:
+            print("You can try heading to the club! Best of luck to you!")
+        elif info == "done":
+          break 
+        info = input("What do you want to learn about 'town', 'work', 'living space', 'love'or 'done'")
     elif self.gender == "female" and waiter.id == "waiter":
-      print("'What town is this?' You ask.")
-      waiter.love += 1
-      print("'Why this is MorrisVille!")
-      print("The waiter smiles as you look him over.")
+      info = input("What do you want to learn about 'town', 'work', 'bed', 'love'or 'done' ")
+      while True:
+        if info == "town":
+          print("'What town is this?' You ask.")
+          waiter.love += 1
+          print("'Why this is MorrisVille!' The Waitress responds")
+          print("The waitress smiles as you look her over.")
+        elif info == "work":
+          print("Is there a place that I can get some work?")
+          waiter.love += 1
+          print("Of course there dear! Just hold over to the office building!")
+          print("They are always looking for help and pay well")
+        elif info == "bed":
+          print("Is there a place that I can get a bed to stay here?")
+          print("Oh yeah, head to the apartments. However, they are expensive")
+          print("Not sure about the amount of money you have but you may need a job...")
+          waiter.love += 1
+        elif info == "love":
+          print("Any ideas on where I can find a date here in this town?")
+          if waiter.love >= 8:
+            print("why you can date me! I have been looking for a partner!")
+            date = print("Do you want to date me?(y/n) ")
+            if date == 'y':
+              self.dating = True
+            elif date == 'n':
+              print("The waitress hits you!")
+              print("Now you hurt my feelings!")
+              waiter.love -= 3
+          elif waiter.love < 8:
+            print("You can try heading to the club! Best of luck to you!")
+        elif info == "done":
+          break 
+        info = input("What do you want to learn about 'town', 'work', 'living space', 'love'or 'done'")
 
 

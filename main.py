@@ -12,6 +12,7 @@ from validation import *
 def resturant(person):
   resturant = Resturant()
   waiter = Waiter()
+  print("\033c")
   print(person.name + " goes into the resturant!")
   print("you see a counter or table.")
   sit = input("Where do you want to sit down?(counter or table) ")
@@ -23,17 +24,19 @@ def resturant(person):
       print("1. Smile")
       print("2. Touch hand")
       print("3. Talk")
-      option = int(input("What would you like to do?"))
+      option = int(input("What would you like to do? "))
       if option == 1:
         person.smile(waiter)
       elif option == 2:
         person.touch(waiter) 
       elif option == 3:
-        person.talk(waiter)
+        person.talkResturant(waiter)
     resturant.menu(person)
     ####
     print('You wait about five minutes and your items, which you ordered come out!')
     print("The food is okay but you fee anxious about moving on!")
+    print("You move back out onto the street.")
+    street(person)
   elif sit == "table":
     resturant.table(person)
     waiter.greet(person) 
@@ -51,6 +54,17 @@ def resturant(person):
 
 
 #### End of Resturant Functions ############
+
+def street(person):
+  print("\033c")
+  print("You are back out on the street.")
+  print("Finally, you notice you have fifty dollars on yourself")
+  choice = input("Where do you want to do?(resturant, club, office, apartments) ")
+  while not validStartChoice(choice):
+    choice = input("Where do you want to do?(resturant, club, office, apartments) ")
+  if choice == "resturant":
+    resturant(person)
+
 
 def start(person):
   print("\033c")
