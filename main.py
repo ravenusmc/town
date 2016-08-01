@@ -21,7 +21,7 @@ def street(person):
   if choice == "resturant":
     resturant(person)
   elif choice == "apartments":
-    apartment(person)
+    pass  # apartment(person)
 
 def start(person):
   print("\033c")
@@ -36,14 +36,14 @@ def start(person):
   print("You see a resturant behind you")
   print("You see a dance club across the street")
   print("Next to the dance club you see an office that is hiring people")
-  print("Finally, you notice you have fifty dollars on yourself")
-  choice = input("Where do you want to do?(resturant, club, office, apartments) ")
+  print("Finally, you notice you have", person.money , "dollars on yourself")
+  choice = input("Where do you want to go?(resturant, club, office, apartments) ")
   while not validStartChoice(choice):
-    choice = input("Where do you want to do?(resturant, club, office, apartments) ")
+    choice = input("Where do you want to go?(resturant, club, office, apartments) ")
   if choice == "resturant":
     resturant(person)
   elif choice == "apartments":
-    apartment(person)
+    pass  # apartment(person)
 
 def config():
   print("\033c")
@@ -61,12 +61,12 @@ def main():
   print("---------------------------")
   print("Welcome to the Object town!")
   print("---------------------------")
-  choice = input("Do you want to use it?(y/n) ")
+  choice = input("Would you like to play?(y/n) ")
   while not validMain(choice):
-    choice = input("Do you want to use it?(y/n) ")
+    choice = input("Would you like to play?(y/n) ")
   if choice == 'y':
     config()
   else:
-    print("Thank you for coming by!")
+    input("Thank you for coming by!")
 
 main()

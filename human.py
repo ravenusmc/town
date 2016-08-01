@@ -52,36 +52,33 @@ class Human():
 
   def talkResturant(self, waiter):
     if self.gender == "male" and waiter.id == "waiter":
-      info = input("What do you want to learn about 'town', 'work', 'bed', 'love'or 'done' ")
+      info = input("What do you want to learn about 'town', 'work', 'bed', 'love' or 'done' ")
       while True:
         if info == "town":
           print("'What town is this?' You ask.")
-          waiter.love += 1
           print("'Why this is MorrisVille!' The Waitress responds")
           print("The waitress smiles as you look her over.")
         elif info == "work":
-          print("Is there a place that I can get some work?")
-          waiter.love += 1
-          print("Of course there dear! Just hold over to the office building!")
-          print("They are always looking for help and pay well")
+          print("'Is there a place that I can get some work?'")
+          print("'Of course there is sir! Just hold over to the office building!'")
+          print("'They are always looking for help and pay well'")
         elif info == "bed":
-          print("Is there a place that I can get a bed to stay here?")
-          print("Oh yeah, head to the apartments. However, they are expensive")
-          print("Not sure about the amount of money you have but you may need a job...")
-          waiter.love += 1
+          print("'Is there a place that I can get a bed to stay here?'")
+          print("'Oh yes, head to the apartments. However, they are expensive'")
+          print("'Not sure about the amount of money you have but you may need a job...'")
         elif info == "love":
-          print("Any ideas on where I can find a date here in this town?")
+          print("'Any ideas on where I can find a date here in this town?'")
           if waiter.love >= 8:
-            print("why you can date me! I have been looking for a partner!")
-            date = print("Do you want to date me?(y/n) ")
+            print("'Why you can date me! I have been looking for a partner!'")
+            date = print("'Do you want to date me?'(y/n) ")
             if date == 'y':
               self.dating = True
             elif date == 'n':
               print("The waitress hits you!")
-              print("Now you hurt my feelings!")
+              print("'Now you hurt my feelings!'")
               waiter.love -= 3
           elif waiter.love < 8:
-            print("You can try heading to the club! Best of luck to you!")
+            print("'You can try heading to the club! Best of luck to you!'")
         elif info == "done":
           break 
         info = input("What do you want to learn about 'town', 'work', 'living space', 'love'or 'done' ")
@@ -90,32 +87,29 @@ class Human():
       while True:
         if info == "town":
           print("'What town is this?' You ask.")
-          waiter.love += 1
-          print("'Why this is MorrisVille!' The Waitress responds")
-          print("The waitress smiles as you look her over.")
+          print("'Why this is MorrisVille!' The Waiter responds")
+          print("The waiter smiles as you look her over.")
         elif info == "work":
-          print("Is there a place that I can get some work?")
-          waiter.love += 1
-          print("Of course there dear! Just hold over to the office building!")
-          print("They are always looking for help and pay well")
+          print("'Is there a place that I can get some work?'")
+          print("'Of course there dear! Just hold over to the office building!'")
+          print("'They are always looking for help and pay well'")
         elif info == "bed":
-          print("Is there a place that I can get a bed to stay here?")
-          print("Oh yeah, head to the apartments. However, they are expensive")
-          print("Not sure about the amount of money you have but you may need a job...")
-          waiter.love += 1
+          print("'Is there a place that I can get a bed to stay here?'")
+          print("'Oh yeah, head to the apartments. However, they are expensive'")
+          print("'Not sure about the amount of money you have but you may need a job...'")
         elif info == "love":
-          print("Any ideas on where I can find a date here in this town?")
+          print("'Any ideas on where I can find a date here in this town?'")
           if waiter.love >= 8:
-            print("why you can date me! I have been looking for a partner!")
+            print("'Why you can date me! I have been looking for a partner!'")
             date = print("Do you want to date me?(y/n) ")
             if date == 'y':
               self.dating = True
             elif date == 'n':
               print("The waiter hits you!")
-              print("Now you hurt my feelings!")
+              print("'Now you hurt my feelings!'")
               waiter.love -= 3
           elif waiter.love < 8:
-            print("You can try heading to the club! Best of luck to you!")
+            print("'You can try heading to the club! Best of luck to you!'")
         elif info == "done":
           break 
         info = input("What do you want to learn about 'town', 'work', 'living space', 'love'or 'done'")
