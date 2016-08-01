@@ -84,7 +84,7 @@ class Human():
             print("You can try heading to the club! Best of luck to you!")
         elif info == "done":
           break 
-        info = input("What do you want to learn about 'town', 'work', 'living space', 'love'or 'done'")
+        info = input("What do you want to learn about 'town', 'work', 'living space', 'love'or 'done' ")
     elif self.gender == "female" and waiter.id == "waiter":
       info = input("What do you want to learn about 'town', 'work', 'bed', 'love'or 'done' ")
       while True:
@@ -111,7 +111,7 @@ class Human():
             if date == 'y':
               self.dating = True
             elif date == 'n':
-              print("The waitress hits you!")
+              print("The waiter hits you!")
               print("Now you hurt my feelings!")
               waiter.love -= 3
           elif waiter.love < 8:
