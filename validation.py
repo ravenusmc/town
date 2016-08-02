@@ -16,7 +16,7 @@ def validConfig(age):
 
 ### Validations for start Function 
 def validStartChoice(choice):
-  if choice == "resturant" or choice == "club" or choice == "office":
+  if choice == "resturant" or choice == "club" or choice == "office" or choice == "apartments":
     return True
   else:
     return False

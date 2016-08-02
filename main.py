@@ -5,9 +5,21 @@ from human import Human
 from car import Car
 from resturant import *
 from validation import *
-from eat import *
 from bed import *
-from apartment import Apartment
+from apartment import *
+
+###### Apartment Functions #######
+
+def apartment(person):
+  apartment = Apartment()
+  host = Host()
+  print("You walk into the apartment.")
+  host.greet(person)
+  apartment.available(person)
+
+
+
+###### END of Apartment Functions #######
 
 #### Resturant Functions ############
 
@@ -62,8 +74,7 @@ def resturant(person):
     print("The food is okay but you feel anxious about moving on!")
     print("You get up, pay your bill, and head out onto the street")
     street(person)
-    
-
+  
 #### End of Resturant Functions ############
 
 #### Main functions #########
@@ -78,7 +89,7 @@ def street(person):
   if choice == "resturant":
     resturant(person)
   elif choice == "apartments":
-    pass  # apartment(person)
+    apartment(person)
 
 def start(person):
   print("\033c")
@@ -100,7 +111,7 @@ def start(person):
   if choice == "resturant":
     resturant(person)
   elif choice == "apartments":
-    pass  # apartment(person)
+    apartment(person)
 
 def config():
   print("\033c")

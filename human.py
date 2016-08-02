@@ -28,9 +28,9 @@ class Human():
     print(self.name + " went to the bathoom!")
 
   def smile(self, waiter):
-    print("You smiled!")
+    print("You smiled at the waitress!")
+    print("She smiled back and may be starting to like you!")
     waiter.love += 2
-    print(waiter.love)
 
   def touch(self, waiter):
     if self.gender == "male":
