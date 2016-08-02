@@ -47,8 +47,8 @@ class Waiter(Resturant):
   def greet(self, human):
     if human.gender == "male":
       print("Well Hello there Mr!")
-      print("What are we having today?")
+      print("What do you want today?")
     elif human.gender == "female":
       print("Well, Hello there Madam!")
-      print("What do you want today?")
+      print("What are we having today?")
 
